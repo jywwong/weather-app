@@ -19,5 +19,21 @@ let weather = {
     document.querySelector(".description").innerText = description;
     document.querySelector(".icon").src = "https://openweathermap.org/img/wn/" + icon + "@2x.png";
     document.querySelector(".humidity").innerText = "Humidity: "+ humidity + "%";
-    }
+    document.body.style.backgroundImage = "url('https://source.unsplash.com/random/?" + name + "')";
+    },
+    search: function () {
+        this.fetchWeather(document.querySelector(".searchbar").value);
+    },
 };
+
+document.querySelector(".searchbutton").addEventListener("click", function () {
+weather.search();
+});
+
+document.querySelector(".searchbar").addEventListener("keyup", e => {
+    if (e.key === "Enter") {
+    weather.search();
+    }
+    });
+
+weather.fetchWeather("London");
