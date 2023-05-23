@@ -13,7 +13,7 @@ body {
 .card {
     background-color: rgba(32,43,65,0.7);
     color:antiquewhite;
-    padding: 2em;
+    padding: 5em;
     border-radius: 8px;
     width: 100%;
     max-width: 420px;
@@ -69,9 +69,14 @@ button:hover {
 .description, .humidity {
     padding: 5px;
     margin: 2px;
+    font-size: 16px;
     text-transform: capitalize;
 }
 
 .icon {
     display: flex;
+}
+
+h2 {
+   font-size: 30px;
 }
